@@ -4,6 +4,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("org.jmailen.kotlinter")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -39,6 +40,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 
@@ -93,4 +95,8 @@ dependencies {
     kaptAndroidTest(libs.hilt.android.compiler)
 
     annotationProcessor(libs.androidx.room.compiler)
+}
+
+secrets {
+    defaultPropertiesFileName = "local.defaults.properties"
 }
