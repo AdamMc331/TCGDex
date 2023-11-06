@@ -5,6 +5,7 @@ plugins {
     id("kotlin-kapt")
     id("org.jmailen.kotlinter")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+//    id("app.cash.paparazzi").version("1.3.1")
 }
 
 android {
@@ -70,6 +71,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.room.runtime)
     implementation(libs.android.material)
+    implementation(libs.coil.compose)
     implementation(libs.compose.ui)
     implementation(libs.compose.material)
     implementation(libs.compose.ui.tooling)
