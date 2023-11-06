@@ -28,7 +28,7 @@ fun CardGridListItem(
     Box(
         modifier = modifier
             .aspectRatio(0.75F)
-            .clip(RoundedCornerShape(2.dp)),
+            .clip(RoundedCornerShape(4.dp)),
     ) {
         TCGImage(
             image = displayModel.image,
@@ -41,13 +41,13 @@ fun CardGridListItem(
         Text(
             text = "#${displayModel.cardNumber} – ${displayModel.name}",
             color = MaterialTheme.colorScheme.onBackground,
-            style = MaterialTheme.typography.titleLarge,
+            style = MaterialTheme.typography.bodySmall,
             textAlign = TextAlign.Center,
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter)
                 .padding(
-                    bottom = 48.dp,
+                    bottom = 12.dp,
                 )
                 .background(
                     color = MaterialTheme.colorScheme.background.copy(
