@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -35,5 +34,5 @@ data class TCGMarketPricesDTO(
     @Json(name = "suggestedPrice")
     val suggestedPrice: Double? = null,
     @Json(name = "trendPrice")
-    val trendPrice: Double? = null
+    val trendPrice: Double? = null,
 )

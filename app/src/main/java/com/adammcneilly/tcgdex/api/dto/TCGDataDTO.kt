@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -59,5 +58,5 @@ data class TCGDataDTO(
     @Json(name = "types")
     val types: List<String>? = listOf(),
     @Json(name = "weaknesses")
-    val weaknesses: List<TCGWeaknessesDTO>? = listOf()
+    val weaknesses: List<TCGWeaknessesDTO>? = listOf(),
 )

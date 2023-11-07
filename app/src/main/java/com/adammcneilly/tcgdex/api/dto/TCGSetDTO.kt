@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -25,5 +24,5 @@ data class TCGSetDTO(
     @Json(name = "total")
     val total: Int? = 0,
     @Json(name = "updatedAt")
-    val updatedAt: String? = ""
+    val updatedAt: String? = "",
 )

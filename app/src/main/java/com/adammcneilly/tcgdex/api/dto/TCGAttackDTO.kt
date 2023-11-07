@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -15,5 +14,5 @@ data class TCGAttackDTO(
     @Json(name = "name")
     val name: String? = null,
     @Json(name = "text")
-    val text: String? = null
+    val text: String? = null,
 )

@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -11,5 +10,5 @@ data class TCGTcgPlayerDTO(
     @Json(name = "updatedAt")
     val updatedAt: String? = "",
     @Json(name = "url")
-    val url: String? = ""
+    val url: String? = "",
 )

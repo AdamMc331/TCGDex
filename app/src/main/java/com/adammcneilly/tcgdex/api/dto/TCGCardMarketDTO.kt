@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -11,5 +10,5 @@ data class TCGCardMarketDTO(
     @Json(name = "updatedAt")
     val updatedAt: String? = null,
     @Json(name = "url")
-    val url: String? = null
+    val url: String? = null,
 )

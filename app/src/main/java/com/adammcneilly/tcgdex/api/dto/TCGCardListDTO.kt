@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -15,5 +14,5 @@ data class TCGCardListDTO(
     @Json(name = "pageSize")
     val pageSize: Int? = 0,
     @Json(name = "totalCount")
-    val totalCount: Int? = 0
+    val totalCount: Int? = 0,
 )

@@ -1,6 +1,5 @@
 package com.adammcneilly.tcgdex.api.dto
 
-
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -15,5 +14,5 @@ data class TCGHolofoilPricesDTO(
     @Json(name = "1stEditionHolofoil")
     val firstEditionHolofoil: TCGCardPricesDTO? = null,
     @Json(name = "unlimitedHolofoil")
-    val unlimitedHolofoil: TCGCardPricesDTO? = null
+    val unlimitedHolofoil: TCGCardPricesDTO? = null,
 )
