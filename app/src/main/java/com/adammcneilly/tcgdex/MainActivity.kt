@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    Greeting("Android")
+                    Text(text = "Hello, Android!")
                 }
             }
         }
