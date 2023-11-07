@@ -15,31 +15,24 @@ interface TCGRetrofitAPI {
     suspend fun getCards(): TCGCardListDTO
 
     companion object {
+        private const val BASE_URL = "https://api.pokemontcg.io"
+
         fun defaultInstance(): TCGRetrofitAPI {
+            val headerInterceptor = TCGAPIHeaderInterceptor()
+
             val loggingInterceptor = HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
             }
 
             val client = OkHttpClient.Builder()
-                .addInterceptor { chain ->
-                    val request = chain
-                        .request()
-                        .newBuilder()
-                        .addHeader(
-                            name = "X-Api-Key",
-                            value = BuildConfig.tcgApiKey,
-                        )
-                        .build()
-
-                    chain.proceed(request)
-                }
+                .addInterceptor(headerInterceptor)
                 .addInterceptor(loggingInterceptor)
                 .build()
 
             val moshi = Moshi.Builder().build()
 
             return Retrofit.Builder()
-                .baseUrl("https://api.pokemontcg.io")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .client(client)
                 .build()
