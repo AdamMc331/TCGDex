@@ -3,8 +3,13 @@ package com.adammcneilly.tcgdex.api.dto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+/**
+ * Represents the holofoil prices of a card from TCG Player API.
+ *
+ * Docs: https://docs.pokemontcg.io/api-reference/cards/card-object#tcgplayer-hash
+ */
 @JsonClass(generateAdapter = true)
-data class TCGHolofoilPricesDTO(
+data class TCGPlayerHolofoilPricesDTO(
     @Json(name = "holofoil")
     val holofoil: TCGCardPricesDTO? = null,
     @Json(name = "normal")

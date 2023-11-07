@@ -3,8 +3,13 @@ package com.adammcneilly.tcgdex.api.dto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+/**
+ * Represents a specific card in the Pokemon TCG returned from the TCG API.
+ *
+ * Docs: https://docs.pokemontcg.io/api-reference/cards/search-cards
+ */
 @JsonClass(generateAdapter = true)
-data class TCGDataDTO(
+data class TCGCardDTO(
     @Json(name = "abilities")
     val abilities: List<TCGAbilityDTO>? = listOf(),
     @Json(name = "artist")
@@ -26,7 +31,7 @@ data class TCGDataDTO(
     @Json(name = "id")
     val id: String? = "",
     @Json(name = "images")
-    val images: TCGImagesDTO? = TCGImagesDTO(),
+    val images: TCGCardImagesDTO? = TCGCardImagesDTO(),
     @Json(name = "legalities")
     val legalities: TCGLegalitiesDTO? = TCGLegalitiesDTO(),
     @Json(name = "level")
@@ -54,7 +59,7 @@ data class TCGDataDTO(
     @Json(name = "supertype")
     val supertype: String? = "",
     @Json(name = "tcgplayer")
-    val tcgplayer: TCGTcgPlayerDTO? = TCGTcgPlayerDTO(),
+    val tcgplayer: TCGPlayerHolofoilCardMarketDTO? = TCGPlayerHolofoilCardMarketDTO(),
     @Json(name = "types")
     val types: List<String>? = listOf(),
     @Json(name = "weaknesses")

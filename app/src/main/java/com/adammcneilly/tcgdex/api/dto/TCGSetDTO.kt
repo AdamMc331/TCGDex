@@ -3,6 +3,11 @@ package com.adammcneilly.tcgdex.api.dto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+/**
+ * Represents an entire set of pokemon cards that are released together.
+ *
+ * Docs: https://docs.pokemontcg.io/api-reference/sets/set-object
+ */
 @JsonClass(generateAdapter = true)
 data class TCGSetDTO(
     @Json(name = "id")

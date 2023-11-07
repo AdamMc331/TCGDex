@@ -23,6 +23,9 @@ private val lightColorScheme =
         secondary = Teal200,
     )
 
+/**
+ * The main [MaterialTheme] implementation for the TCG Dex app.
+ */
 @Composable
 @TargetApi(Build.VERSION_CODES.S)
 fun TCGTheme(
@@ -30,13 +33,12 @@ fun TCGTheme(
     dynamicTheme: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S,
     content: @Composable () -> Unit,
 ) {
-    val colorScheme =
-        when {
-            dynamicTheme && darkTheme -> dynamicDarkColorScheme(LocalContext.current)
-            dynamicTheme && !darkTheme -> dynamicLightColorScheme(LocalContext.current)
-            darkTheme -> darkColorScheme
-            else -> lightColorScheme
-        }
+    val colorScheme = when {
+        dynamicTheme && darkTheme -> dynamicDarkColorScheme(LocalContext.current)
+        dynamicTheme && !darkTheme -> dynamicLightColorScheme(LocalContext.current)
+        darkTheme -> darkColorScheme
+        else -> lightColorScheme
+    }
 
     MaterialTheme(
         colorScheme = colorScheme,

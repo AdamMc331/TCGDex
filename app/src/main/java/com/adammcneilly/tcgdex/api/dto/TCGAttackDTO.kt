@@ -3,6 +3,11 @@ package com.adammcneilly.tcgdex.api.dto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+/**
+ * Represents the various attacks that can be used by a specific Pokemon card, if relevant.
+ *
+ * Docs: https://docs.pokemontcg.io/api-reference/cards/card-object#attacks-listhash
+ */
 @JsonClass(generateAdapter = true)
 data class TCGAttackDTO(
     @Json(name = "convertedEnergyCost")

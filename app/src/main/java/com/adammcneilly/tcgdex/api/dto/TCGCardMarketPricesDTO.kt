@@ -3,8 +3,13 @@ package com.adammcneilly.tcgdex.api.dto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+/**
+ * A collection of all price information for a card in a [TCGCardMarketDTO].
+ *
+ * Docs: https://docs.pokemontcg.io/api-reference/cards/card-object#cardmarket-hash
+ */
 @JsonClass(generateAdapter = true)
-data class TCGMarketPricesDTO(
+data class TCGCardMarketPricesDTO(
     @Json(name = "averageSellPrice")
     val averageSellPrice: Double? = null,
     @Json(name = "avg1")

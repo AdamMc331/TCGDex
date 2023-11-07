@@ -8,13 +8,28 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
+/**
+ * Defines all of the data requests to the TCG API.
+ *
+ * Documentation for the API can be found here: https://docs.pokemontcg.io
+ */
 interface TCGRetrofitAPI {
+
+    /**
+     * Retrieves a list of cards from the TCG API.
+     *
+     * Docs: https://docs.pokemontcg.io/api-reference/cards/search-cards
+     */
     @GET("/v2/cards")
     suspend fun getCards(): TCGCardListDTO
 
     companion object {
         private const val BASE_URL = "https://api.pokemontcg.io"
 
+        /**
+         * Create a default implementation of [TCGRetrofitAPI]. Ideally in the future this will be moved into
+         * some sort of dependency management framework.
+         */
         fun defaultInstance(): TCGRetrofitAPI {
             val headerInterceptor = TCGAPIHeaderInterceptor()
 
