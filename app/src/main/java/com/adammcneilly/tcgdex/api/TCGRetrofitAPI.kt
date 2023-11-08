@@ -14,7 +14,6 @@ import retrofit2.http.GET
  * Documentation for the API can be found here: https://docs.pokemontcg.io
  */
 interface TCGRetrofitAPI {
-
     /**
      * Retrieves a list of cards from the TCG API.
      *
