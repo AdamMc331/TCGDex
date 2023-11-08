@@ -14,6 +14,10 @@ import androidx.core.view.WindowCompat
 import com.adammcneilly.tcgdex.theme.TCGTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
+/**
+ * This [ComponentActivity] is the main entry point into the TCG Dex application,
+ * launched when the user clicks on the app icon.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +31,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    Greeting("Android")
+                    Text(text = "Hello, Android!")
                 }
             }
         }
@@ -62,9 +66,4 @@ class MainActivity : ComponentActivity() {
             onDispose { }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
 }

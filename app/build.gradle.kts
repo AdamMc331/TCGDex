@@ -48,7 +48,7 @@ android {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
@@ -75,6 +75,7 @@ dependencies {
     implementation(libs.compose.ui.tooling)
     implementation(libs.hilt.android)
     implementation(libs.square.moshi.kotlin)
+    implementation(libs.square.okhttp.logging.interceptor)
     implementation(libs.square.retrofit)
     implementation(libs.square.retrofit.converter.moshi)
 
